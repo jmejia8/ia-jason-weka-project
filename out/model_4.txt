@@ -1,0 +1,51 @@
+J48 pruned tree
+------------------
+
+checking_status = <0
+|   savings_status = <100
+|   |   purpose = new car
+|   |   |   duration <= 11: good (4.0/1.0)
+|   |   |   duration > 11: bad (7.0)
+|   |   purpose = used car: good (0.0)
+|   |   purpose = furniture/equipment: good (15.0/3.0)
+|   |   purpose = radio/tv: bad (3.0/1.0)
+|   |   purpose = domestic appliance: good (0.0)
+|   |   purpose = repairs: bad (1.0)
+|   |   purpose = education: bad (3.0/1.0)
+|   |   purpose = vacation: good (0.0)
+|   |   purpose = retraining: good (0.0)
+|   |   purpose = business: bad (2.0)
+|   |   purpose = other: good (2.0)
+|   savings_status = 100<=X<500: bad (1.0)
+|   savings_status = 500<=X<1000: good (2.0/1.0)
+|   savings_status = >=1000: good (1.0)
+|   savings_status = no known savings: bad (8.0)
+checking_status = 0<=X<200
+|   other_parties = none
+|   |   savings_status = <100
+|   |   |   job = unemp/unskilled non res: good (1.0)
+|   |   |   job = unskilled resident
+|   |   |   |   other_payment_plans = bank: bad (2.0)
+|   |   |   |   other_payment_plans = stores: good (0.0)
+|   |   |   |   other_payment_plans = none: good (4.0)
+|   |   |   job = skilled: bad (15.0/4.0)
+|   |   |   job = high qualif/self emp/mgmt: good (4.0/1.0)
+|   |   savings_status = 100<=X<500: good (6.0/1.0)
+|   |   savings_status = 500<=X<1000
+|   |   |   job = unemp/unskilled non res: good (1.0)
+|   |   |   job = unskilled resident: bad (2.0)
+|   |   |   job = skilled: good (3.0/1.0)
+|   |   |   job = high qualif/self emp/mgmt: good (0.0)
+|   |   savings_status = >=1000: good (2.0/1.0)
+|   |   savings_status = no known savings: good (6.0)
+|   other_parties = co applicant: bad (1.0)
+|   other_parties = guarantor: good (4.0)
+checking_status = >=200
+|   housing = rent: good (1.0)
+|   housing = own: good (15.0/4.0)
+|   housing = for free: bad (2.0)
+checking_status = no checking: good (82.0/6.0)
+
+Number of Leaves  : 	35
+
+Size of the tree : 	45

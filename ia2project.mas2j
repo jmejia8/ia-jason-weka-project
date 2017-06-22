@@ -1,0 +1,17 @@
+MAS ia2project {
+
+	infrastructure: Centralised
+
+	environment: jaca.CartagoEnvironment
+
+	agents:
+		cliente   cliente  agentArchClass jaca.CAgentArch;
+		jefe      jefe     agentArchClass jaca.CAgentArch;
+		empleado1 empleado agentArchClass jaca.CAgentArch;
+		empleado2 empleado agentArchClass jaca.CAgentArch;
+		empleado3 empleado agentArchClass jaca.CAgentArch;
+		empleado4 empleado agentArchClass jaca.CAgentArch;
+
+	aslSourcePath:
+		"src/asl";
+}

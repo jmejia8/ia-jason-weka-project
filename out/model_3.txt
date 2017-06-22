@@ -1,0 +1,50 @@
+J48 pruned tree
+------------------
+
+checking_status = <0
+|   age <= 25: bad (12.0/2.0)
+|   age > 25
+|   |   housing = rent
+|   |   |   own_telephone = none: good (5.0/1.0)
+|   |   |   own_telephone = yes: bad (4.0/1.0)
+|   |   housing = own
+|   |   |   personal_status = male div/sep: bad (2.0)
+|   |   |   personal_status = female div/dep/mar: good (4.0)
+|   |   |   personal_status = male single: good (18.0/2.0)
+|   |   |   personal_status = male mar/wid: bad (3.0/1.0)
+|   |   |   personal_status = female single: good (0.0)
+|   |   housing = for free: bad (9.0/1.0)
+checking_status = 0<=X<200
+|   other_parties = none
+|   |   personal_status = male div/sep: bad (4.0)
+|   |   personal_status = female div/dep/mar
+|   |   |   job = unemp/unskilled non res: good (2.0/1.0)
+|   |   |   job = unskilled resident: good (2.0)
+|   |   |   job = skilled
+|   |   |   |   duration <= 21: bad (4.0/1.0)
+|   |   |   |   duration > 21: good (4.0)
+|   |   |   job = high qualif/self emp/mgmt: bad (5.0)
+|   |   personal_status = male single
+|   |   |   credit_amount <= 7966: good (23.0/5.0)
+|   |   |   credit_amount > 7966: bad (4.0)
+|   |   personal_status = male mar/wid
+|   |   |   purpose = new car: bad (1.0)
+|   |   |   purpose = used car: good (2.0)
+|   |   |   purpose = furniture/equipment: good (0.0)
+|   |   |   purpose = radio/tv: bad (2.0)
+|   |   |   purpose = domestic appliance: good (0.0)
+|   |   |   purpose = repairs: good (0.0)
+|   |   |   purpose = education: good (0.0)
+|   |   |   purpose = vacation: good (0.0)
+|   |   |   purpose = retraining: good (0.0)
+|   |   |   purpose = business: good (1.0)
+|   |   |   purpose = other: good (0.0)
+|   |   personal_status = female single: good (0.0)
+|   other_parties = co applicant: good (2.0)
+|   other_parties = guarantor: good (2.0)
+checking_status = >=200: good (10.0/1.0)
+checking_status = no checking: good (75.0/6.0)
+
+Number of Leaves  : 	33
+
+Size of the tree : 	44

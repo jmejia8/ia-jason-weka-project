@@ -1,0 +1,30 @@
+J48 pruned tree
+------------------
+
+foreign_worker = yes
+|   duration <= 30
+|   |   credit_history = no credits/all paid: good (2.0)
+|   |   credit_history = all paid: bad (7.0/1.0)
+|   |   credit_history = existing paid
+|   |   |   credit_amount <= 727: bad (5.0)
+|   |   |   credit_amount > 727: good (81.0/21.0)
+|   |   credit_history = delayed previously: good (10.0/1.0)
+|   |   credit_history = critical/other existing credit
+|   |   |   other_payment_plans = bank: bad (4.0/1.0)
+|   |   |   other_payment_plans = stores: good (1.0)
+|   |   |   other_payment_plans = none: good (44.0/3.0)
+|   duration > 30
+|   |   num_dependents <= 1
+|   |   |   savings_status = <100: bad (20.0/4.0)
+|   |   |   savings_status = 100<=X<500
+|   |   |   |   age <= 29: bad (3.0)
+|   |   |   |   age > 29: good (2.0)
+|   |   |   savings_status = 500<=X<1000: good (2.0)
+|   |   |   savings_status = >=1000: bad (0.0)
+|   |   |   savings_status = no known savings: good (3.0/1.0)
+|   |   num_dependents > 1: good (6.0/1.0)
+foreign_worker = no: good (10.0)
+
+Number of Leaves  : 	16
+
+Size of the tree : 	24

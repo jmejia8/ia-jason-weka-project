@@ -1,0 +1,26 @@
+J48 pruned tree
+------------------
+
+checking_status = <0
+|   age <= 35: bad (33.0/10.0)
+|   age > 35
+|   |   credit_amount <= 6468: good (16.0/1.0)
+|   |   credit_amount > 6468: bad (2.0)
+checking_status = 0<=X<200
+|   duration <= 22: good (29.0/4.0)
+|   duration > 22
+|   |   savings_status = <100: bad (15.0/2.0)
+|   |   savings_status = 100<=X<500
+|   |   |   age <= 26: bad (2.0)
+|   |   |   age > 26: good (2.0)
+|   |   savings_status = 500<=X<1000: bad (0.0)
+|   |   savings_status = >=1000: good (1.0)
+|   |   savings_status = no known savings: good (1.0)
+checking_status = >=200
+|   residence_since <= 1: bad (2.0)
+|   residence_since > 1: good (10.0/1.0)
+checking_status = no checking: good (87.0/12.0)
+
+Number of Leaves  : 	13
+
+Size of the tree : 	20
